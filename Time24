@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int hours, minutes, seconds;
+
+    // Read input: hours, minutes, seconds
+    scanf("%d %d %d", &hours, &minutes, &seconds);
+
+    // Step 1: Convert extra seconds into minutes
+    minutes += seconds / 60;
+    seconds = seconds % 60;
+
+    // Step 2: Convert extra minutes into hours
+    hours += minutes / 60;
+    minutes = minutes % 60;
+
+    // Print the result
+    printf("Total Number of hours is %d\n", hours);
+    printf("Total Number of minutes is %d\n", minutes);
+    printf("Total Number of seconds is %d\n", seconds);
+
+    return 0;
+}
